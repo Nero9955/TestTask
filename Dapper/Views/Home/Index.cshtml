@@ -1,0 +1,38 @@
+﻿@model IEnumerable<DapperP.Models.User>
+@{
+    ViewData["Title"] = "База клиентов";
+    Layout = default;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> "База клиентов"</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>"IPv4-подсеть"</td>
+            <td>"Имя"</td>
+            <td>"Возраст"</td>
+            <td>"Пол"</td>
+            <td></td>
+            <td><a href="~/Home/Create">Добавить</a></td>
+        </tr>
+        <tr></tr>
+        @foreach (var user in Model)
+        {
+    <tr>
+        <td>@user.IpAdress</td>
+        <td>@user.Name</td>
+        <td>@user.Age</td>
+        <td>@user.Gender</td>
+        <td><a href="~/Home/Edit/@user.Id">Изменить</a></td>
+        <td><a href="~/Home/Delete/@user.Id">Удалить</a></td>
+    </tr>
+        }
+    </table>
+</body>
+</html>

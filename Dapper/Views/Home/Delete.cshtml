@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model DapperP.Models.User
+@{
+    Layout = default;
+}
+<!DOCTYPE html>
+
+<html>
+<body>
+
+
+    @using (Html.BeginForm())
+    {
+    <table>
+        <tr>
+            <td>"IPv4-подсеть"</td>
+            <td>"Имя"</td>
+            <td>"Возраст"</td>
+            <td>"Пол"</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>@Model.IpAdress</td>
+            <td>@Model.Name</td>
+            <td>@Model.Age</td>
+            <td>@Model.Gender</td>
+            </tr>
+</table>
+    <input type="submit" value="Удалить" />
+    }
+</body>
+</html>
